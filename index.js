@@ -1,18 +1,21 @@
 const movieListing = document.querySelector(".movie-listing")
+
+function addMoviePic(movie) {
+    const moviePic = document.createElement("figure")
+    moviePic.classList.add('movieThumb')
+    moviePic.innerHTML = `
+            <a href="landing.html?id=${movie.id}">
+            <img src="${movie.image}"/>
+            </a>
+            `
+    movieListing.append(moviePic)
+}
+
 const url = "https://ghibliapi.herokuapp.com/films/"
-
-
 fetch(url)
     .then(response => {
         return response.json()
-    }).then(parsedReponse => {
-        const movieImageArray = parsedReponse.map(movie => movie.image)
-        movieImageArray.forEach(movieUrl => {
-            const img = document.createElement("img")
-            const movieDesc = document.createElement("p")
-            img.classList.add('movieThumb')
-            img.src = `${movieUrl}`;
-            movieListing.append(img)
-            console.log(parsedReponse)
-        });
+    }).then(listOfMovies => {
+        console.log(listOfMovies)
+        listOfMovies.forEach(movie => addMoviePic(movie))
     })

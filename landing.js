@@ -1,6 +1,7 @@
 const movieFocus = document.querySelector(".movie-focus")
 const queryString = window.location.search
-const queryParams = new URLSearchParams(queryString) //object
+const queryParams = new URLSearchParams(queryString)
+const loader = document.querySelector(".loader")
 
 const id = queryParams.get("id")
 console.log(id)
@@ -20,4 +21,5 @@ fetch(url)
         <p><span>Summary</span></p>
         <p class="summary">${movie.description}</p>
         `
+        loader.classList.add("hide")
     });

@@ -1,6 +1,7 @@
 const form = document.querySelector("form")
 const $movieSelectionForm = document.querySelector("#movie-selection")
 const $select = $movieSelectionForm.querySelector("select")
+const loader = document.querySelector(".loader")
 
 form.addEventListener("submit", (event) => {
     event.preventDefault()

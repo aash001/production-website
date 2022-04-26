@@ -1,4 +1,5 @@
 const movieListing = document.querySelector(".movie-listing")
+const loader = document.querySelector(".loader")
 
 function addMoviePic(movie) {
     const moviePic = document.createElement("figure")
@@ -17,6 +18,6 @@ fetch(url)
     .then(response => {
         return response.json()
     }).then(listOfMovies => {
-        console.log(listOfMovies)
         listOfMovies.forEach(movie => addMoviePic(movie))
+        loader.classList.add("hide")
     })

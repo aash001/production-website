@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="questionaire.js"></script>
+</head>
+
+<body class="quest-body">
+    <header class="top-nav">
+        <a href="index.html">Home</a>
+        <a href="movies.html">Movie List</a>
+        <a href="trailers.html">Movie Trailers</a>
+        <a class="active" href="questionaire.html">What's Your Favorite Movie?</a>
+    </header>
+    <form>
+        <ul>
+            <li>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user-name" />
+            </li>
+            <li>
+                <label for="mail">E-mail:</label>
+                <input type="email" id="mail" name="user-email" required />
+            </li>
+            <li>
+                <label for="fav">Favorite Movie:</label>
+                <select name="favorite-movie">
+                    <option value="placeholder"></option>
+                    <option value="My Neighbor Totoro">My Neighbor Totoro</option>
+                    <option value="Spirited Away">Spirited Away</option>
+                </select>
+            </li>
+            <li>
+                <label for="msg">Message:</label>
+                <textarea id="msg" name="user-message">I'd love to hear your thoughts about it!</textarea>
+            </li>
+            <li class="button">
+                <button type="submit" value="create">Submit</button>
+            </li>
+        </ul>
+    </form>
+
+</body>
+
+</html>

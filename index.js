@@ -6,6 +6,7 @@ function addMoviePic(movie) {
     moviePic.innerHTML = `
             <a href="landing.html?id=${movie.id}">
             <img src="${movie.image}"/>
+            <figcaption>${movie.title}</figcaption>
             </a>
             `
     movieListing.append(moviePic)

@@ -22,18 +22,16 @@
         <ul>
             <li>
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="user-name" />
+                <input type="text" id="name" name="user-name" required />
             </li>
             <li>
                 <label for="mail">E-mail:</label>
                 <input type="email" id="mail" name="user-email" required />
             </li>
-            <li>
-                <label for="fav">Favorite Movie:</label>
-                <select name="favorite-movie">
+            <li id="movie-selection">
+                <label for="favorite">Favorite Movie:</label>
+                <select name="favorite-movie" id="favorite">
                     <option value="placeholder"></option>
-                    <option value="My Neighbor Totoro">My Neighbor Totoro</option>
-                    <option value="Spirited Away">Spirited Away</option>
                 </select>
             </li>
             <li>
@@ -41,11 +39,10 @@
                 <textarea id="msg" name="user-message">I'd love to hear your thoughts about it!</textarea>
             </li>
             <li class="button">
-                <button type="submit" value="create">Submit</button>
+                <button type="submit" value="Submit">Submit</button>
             </li>
         </ul>
     </form>
-
 </body>
 
 </html>

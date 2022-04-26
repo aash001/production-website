@@ -14,12 +14,10 @@ fetch(url)
         movieListing.innerHTML = `
         <img src=${movie.image} alt="Movie Poster"/>
         <h2><span>Title: </span>${movie.title}</h2>
-        <p class="director">${movie.director}</p>
-        <p>${movie.release_date}</p>
-        <p>${movie.running_time} minutes</p>
+        <p class="director">Director: ${movie.director}</p>
+        <p>Release Date: ${movie.release_date}</p>
+        <p>Run Time: ${movie.running_time} minutes</p>
+        <h4> Summary </h4>
         <p>${movie.description}</p>
         `
-        //     const moviePoster = document.createElement('img')
-        //     moviePoster.src = movie.image
-        //     movieListing.append(moviePoster)
     });

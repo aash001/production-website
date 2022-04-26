@@ -1,4 +1,4 @@
-const movieListing = document.querySelector(".movie-listing")
+const movieFocus = document.querySelector(".movie-focus")
 const queryString = window.location.search
 const queryParams = new URLSearchParams(queryString) //object
 
@@ -11,13 +11,13 @@ fetch(url)
         return response.json()
     }).then(movie => {
         console.log(movie)
-        movieListing.innerHTML = `
+        movieFocus.innerHTML = `
         <img src=${movie.image} alt="Movie Poster"/>
-        <h2><span>Title: </span>${movie.title}</h2>
-        <p class="director">Director: ${movie.director}</p>
-        <p>Release Date: ${movie.release_date}</p>
-        <p>Run Time: ${movie.running_time} minutes</p>
-        <h4> Summary </h4>
+        <p><span>Title:</span> ${movie.title}</p>
+        <p><span>Director:</span> ${movie.director}</p>
+        <p><span>Release Date:</span> ${movie.release_date}</p>
+        <p><span>Run Time:</span> ${movie.running_time} minutes</p>
+        <p><span>Summary</span></p>
         <p>${movie.description}</p>
         `
     });

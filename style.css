@@ -43,6 +43,29 @@
     width: 100%;
 }
 
+.landing-body {
+  background-color: #000;
+}
+
+.movie-focus {
+  text-align: center;
+  padding: 10px 0px 10px 0px;
+}
+
+.movie-focus > img {
+  width: 30%;
+  border: #999 solid 10px;
+}
+
+.movie-focus > p > span {
+  color: yellow;
+}
+
+.movie-focus > p {
+  color: #00adef;
+  padding-top: 10px;
+}
+
 main {
   height: 100vh;
   display: flex;

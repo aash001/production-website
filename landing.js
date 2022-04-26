@@ -18,6 +18,6 @@ fetch(url)
         <p><span>Release Date:</span> ${movie.release_date}</p>
         <p><span>Run Time:</span> ${movie.running_time} minutes</p>
         <p><span>Summary</span></p>
-        <p>${movie.description}</p>
+        <p class="summary">${movie.description}</p>
         `
     });

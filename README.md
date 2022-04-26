@@ -5,3 +5,9 @@ Site URL: https://aash001.github.io/production-website/
 Site Images:
 
 ![alt text](https://aash001.github.io/production-website/movieListing.png)
+
+![alt text](https://aash001.github.io/production-website/questionaire.png)
+
+![alt text](https://aash001.github.io/production-website/movieTrailers.png)
+
+

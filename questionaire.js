@@ -10,10 +10,15 @@ form.addEventListener("submit", (event) => {
     const userName = formData.get("user-name")
     const userEmail = formData.get("user-email")
     const favoriteMovie = formData.get("favorite-movie")
-    const userMessage = formData.get("usermessage")
+    const userMessage = formData.get("user-message")
 
-    console.log(localStorage)
+    localStorage.setItem("name", userName)
+    localStorage.setItem("mail", userEmail)
+    localStorage.setItem("favorite", favoriteMovie)
+    localStorage.setItem("msg", userMessage)
+
     event.target.reset()
+    console.log(localStorage)
 });
 
 fetch("https://ghibliapi.herokuapp.com/films/")
